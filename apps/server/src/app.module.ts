@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TrpcModule } from './trpc/trpc.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { join } from 'path';
       },
     }),
     TrpcModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
